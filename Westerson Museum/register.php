@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include 'php/signup.php';
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -210,6 +214,11 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="register-form">
+                        <?php
+                            if (isset($display)){
+                                echo $display;
+                            }
+                        ?>
                         <h2>Register</h2>
                         <form method="POST">
                             <div class="container">
@@ -234,8 +243,8 @@
                             </div>
                             <div class="group-input">
                                 <label for="mailAdd">Mailing Address</label>
-                                <input type="text" id="mailAdd" name="mailAdd" placeholder="Address Line 1">
-                                <input type="text" id="mailAdd" name="mailAdd" placeholder="Address Line 2">
+                                <input type="text" id="mailAdd" name="mailAdd1" placeholder="Address Line 1">
+                                <input type="text" id="mailAdd" name="mailAdd2" placeholder="Address Line 2">
                             </div>
                             <div class="group-input">
                                 <label for="username">Username *</label>
@@ -243,13 +252,14 @@
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password *</label>
-                                <input type="password" id="pass" placeholder="Password" required>
+                                <input type="password" id="pass" name="password" placeholder="Password" required>
                             </div>
                             <div class="group-input">
                                 <label for="con-pass">Confirm Password *</label>
                                 <input type="password" id="con-pass" placeholder="Retype Password" required>
+                                <span id="message"></span>
                             </div>
-                            <button type="submit" class="site-btn register-btn" name="btnRegister">REGISTER</button>
+                            <button type="submit" class="site-btn register-btn" id="btnRegister" name="btnRegister">REGISTER</button>
                         </form>
                         <div class="switch-login">
                             <a href="./login.html" class="or-login">Or Login</a>
@@ -369,7 +379,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -381,6 +390,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-</body>
 
+    <!-- Script for Password Validation -->
+    <script>
+        $('#btnRegister').prop('disabled', true);
+        $('#pass, #con-pass').on('keyup', function () {
+            if ($('#pass').val() != "" && ($('#pass').val() == $('#con-pass').val())) {
+                $('#message').html('Matching').css('color', 'green');
+                $('#btnRegister').prop('disabled', false);
+            }
+            else {
+                $('#message').html('Not Matching').css('color', 'red');
+                $('#btnRegister').prop('disabled', true);
+            }
+        });
+    </script>
+</body>
 </html>
