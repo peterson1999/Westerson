@@ -1,7 +1,6 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
     $display = "";
-    $cssdisp = "";
 
     if (isset($_POST['btnLogin'])){
         $user = $_POST['username'];
@@ -20,7 +19,7 @@
             $result = mysqli_query($con, $sql);
             $row = mysqli_fetch_array($result);
             if ($row[0]>0){
-                $display.= '<div class="container">
+                $display.= '<div class="container mb-3">
                                 <div class="row">
                                     <div class="col-lg-2"></div>
                                     <div class="col-12 col-lg-8 bg-danger text-light text-center rounded">
@@ -32,7 +31,7 @@
                             </div>';
             }
             else{
-                $display.= '<div class="container">
+                $display.= '<div class="container mb-3">
                                 <div class="row">
                                     <div class="col-lg-2"></div>
                                     <div class="col-12 col-lg-8 bg-danger text-light text-center rounded">

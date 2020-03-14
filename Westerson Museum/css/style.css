@@ -3757,6 +3757,11 @@ ol {
   Register Form
 -----------------------*/
 
+button[type="submit"]:disabled {
+	background: #969a9e !important;
+	border-color: #969a9e !important;
+}
+
 .register-login-section {
 	padding-top: 72px;
 	padding-bottom: 80px;

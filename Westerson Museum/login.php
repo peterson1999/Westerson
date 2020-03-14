@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include 'php/checkLogin.php';
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -211,14 +215,19 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="login-form">
                         <h2>Login</h2>
-                        <form action="#">
+                        <?php
+                            if(isset($display)){
+                                echo $display;
+                            }
+                        ?>
+                        <form method="POST">
                             <div class="group-input">
                                 <label for="username">Username or email address *</label>
-                                <input type="text" id="username">
+                                <input type="text" id="username" name="username">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password *</label>
-                                <input type="text" id="pass">
+                                <input type="password" id="pass" name="password">
                             </div>
                             <div class="group-input gi-check">
                                 <div class="gi-more">
@@ -230,7 +239,7 @@
                                     <a href="#" class="forget-pass">Forget your Password</a>
                                 </div>
                             </div>
-                            <button type="submit" class="site-btn login-btn">Sign In</button>
+                            <button type="submit" class="site-btn login-btn" name="btnLogin">Sign In</button>
                         </form>
                         <div class="switch-login">
                             <a href="./register.html" class="or-login">Or Create An Account</a>
