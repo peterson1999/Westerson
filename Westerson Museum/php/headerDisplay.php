@@ -17,7 +17,7 @@
                         <div class="ht-right col-4 col-lg-3 pt-1 pt-lg-0">
                             <div class="lan-selector">
                                 <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                                    <option value="yt" 
+                                    <option value="yt" data-image="img/flag-1.jpg" data-imagecss="flag yt"
                                         data-title="English">English</option>
                                 </select>
                             </div>
