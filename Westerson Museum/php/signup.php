@@ -45,6 +45,8 @@
             $sql =  "insert into Seller(SellerID, Name, Phone_number, Email, Mailing_address) 
                     values ($id, '$fullName', '$phone', '$email', '$mailAdd')";
             mysqli_query($con, $sql);
+            $_SESSION['user']=$user;
+            header("Location: index.html");
         }
     }
 ?>
