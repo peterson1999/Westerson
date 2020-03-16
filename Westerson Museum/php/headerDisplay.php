@@ -2,6 +2,11 @@
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
     $display="";
     if (isset($_SESSION['user'])){
+        $name = $_SESSION['user'];
+        if (strlen($name)>10){
+            $name = substr($name, 0, 6);
+            $name.="...";
+        }
         $display.=' <div class="row">
                         <div class="ht-left d-md-none d-lg-block col-lg-5">
                             <div class="mail-service">
@@ -23,7 +28,7 @@
                             </div>
                         </div>
                         <div class="btn-group py-2 col-4 col-md-2 col-lg-2">
-                            <button type="button" class="btn btn-dark">'.$_SESSION['user'].'</button>
+                            <button type="button" class="btn btn-dark"><i class="fa fa-user"></i> '.$name.'</button>
                             <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
