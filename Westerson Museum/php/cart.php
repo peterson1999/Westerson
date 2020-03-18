@@ -1,6 +1,6 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
-    $url = '/product.php?piece_number=';    //for redirect
+    $url = "";
     
     $displayCart = ""; //for cart popup
     $total = 0.0;
@@ -27,7 +27,6 @@
                             </tr>
                         ';
             $total+= ($cart->price * $cart->qty);
-            echo $i;
             $i++;
         }
     }
@@ -35,19 +34,30 @@
         $displayCart.='<tr><td>No items in your cart.</td></tr>';
     }
 
-    //gets value of url, for example, "product.php?piece_number=1" -> gets 1
-    if (isset($_GET['piece_number'])){
-        $piece_number = $_GET['piece_number'];
-    }
-    else{//show 1st artpiece if no value in links
-        $piece_number = 1;
-    }
+    if ($_SERVER['PHP_SELF']=='/product.php'){  //when in products page
+        $url = '/product.php?piece_number=';    //for redirect
+        
+        //gets value of url, for example, "product.php?piece_number=1" -> gets 1
+        if (isset($_GET['piece_number'])){
+            $piece_number = $_GET['piece_number'];
+            $_SESSION['prev_piece_number'] = $piece_number;
+        }
+        else if (substr($_SERVER['REQUEST_URI'],13,6)=='remove'){
+            $piece_number = $_SESSION['prev_piece_number'];
+        }
+        else{//show previously accessed artpiece if no value in links
+            echo "no value in link";
+        }
 
-    $sql = "select * from artpiece where PieceNumber='$piece_number'";
-    $res = mysqli_query($con, $sql);
-    $row = mysqli_fetch_array($res);
-
-    $displayPhoto = base64_encode($row['Image']);
+        $sql = "select * from artpiece where PieceNumber='$piece_number'";
+        $res = mysqli_query($con, $sql);
+        $row = mysqli_fetch_array($res);
+        
+        $displayPhoto = base64_encode($row['Image']);
+    }
+    else{   //any other page
+        $url = $_SERVER['PHP_SELF'];
+    }
 
     //add to cart
     if (isset($_POST['btnAddCart'])){
@@ -83,6 +93,13 @@
                 }
 			}
         }
-        header('Location:'.$url.$piece_number);
+        if ($_SERVER['PHP_SELF']=='/product.php'){
+            header('Location:'.$url.$piece_number);
+            exit();
+        }
+        else{
+            header('Location:'.$url);
+            exit();
+        }
     }
 ?>
