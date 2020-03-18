@@ -68,6 +68,6 @@
     if (isset($_POST['btnLogout'])){
         $_SESSION['user']=null;
         $_SESSION['name']=null;
-        header('Location: index.php');
+        header("Location: ".$_SERVER['REQUEST_URI']);
     }
 ?>
