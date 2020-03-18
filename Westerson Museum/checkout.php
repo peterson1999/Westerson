@@ -318,7 +318,7 @@
     <footer class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="footer-left">
                         <div class="footer-logo">
                             <a href="index.php"><img src="img/footer-logo.png" alt=""></a>
@@ -330,7 +330,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 offset-lg-4">
+                <div class="col-lg-2 offset-lg-3">
                     <div class="footer-widget">
                         <h5>Information</h5>
                         <ul>
