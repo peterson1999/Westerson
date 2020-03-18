@@ -34,8 +34,7 @@
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">My Profile</a>
-                                <a class="dropdown-item" href="#">Your Cart</a>
-                                <a class="dropdown-item" href="#">Items for Sale</a>
+                                <a class="dropdown-item" href="shopping-cart.php">Your Cart</a>
                                 <div class="dropdown-divider"></div>
                                 <form method = "POST">
                                 <button type="submit" class="dropdown-item" href="index.php" name="btnLogout">Log Out</button>
