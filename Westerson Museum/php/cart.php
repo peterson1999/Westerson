@@ -42,10 +42,10 @@
             $piece_number = $_GET['piece_number'];
             $_SESSION['prev_piece_number'] = $piece_number;
         }
-        else if (substr($_SERVER['REQUEST_URI'],13,6)=='remove'){//show previously accessed artpiece if recently removed
+        else if (substr($_SERVER['REQUEST_URI'],13,6)=='remove'){   //show previously accessed artpiece if recently removed
             $piece_number = $_SESSION['prev_piece_number'];
         }
-        else{
+        else{   //goes to shop.php if no value in url
             header("Location: shop.php");
             exit();
         }
