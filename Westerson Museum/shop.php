@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include 'php/artType.php';
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -145,16 +150,18 @@
                 <div class="nav-depart">
                     <div class="depart-btn">
                         <i class="ti-menu"></i>
-                        <span>All departments</span>
+                        <span>All Artpieces</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Underwear</a></li>
-                            <li><a href="#">Kid's Clothing</a></li>
-                            <li><a href="#">Brand Fashion</a></li>
-                            <li><a href="#">Accessories/Shoes</a></li>
-                            <li><a href="#">Luxury Brands</a></li>
-                            <li><a href="#">Brand Outdoor Apparel</a></li>
+                        <?php
+                            if(isset($displaycat)){
+                                echo $displaycat;
+                            }
+                        ?>
+                            <!-- <li class="active"><a href = "shop.php?category=paintings">Paintings</a></li>
+                            <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+                            <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+                            <li><a href="shop.php?category=mosaic">Mosaic
+                            </a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -351,7 +358,13 @@
                     </div>
                     <div class="product-list">
                         <div class="row">
-                            <div class="col-lg-4 col-sm-6">
+                        <?php
+                            if(isset($display)){
+                                echo $display;
+                            }
+                        ?>
+                                
+                            <!-- <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
                                         <img src="img/products/product-1.jpg" alt="">
@@ -577,8 +590,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>-->
+                        </div> 
                     </div>
                     <div class="loading-more">
                         <i class="icon_loading"></i>

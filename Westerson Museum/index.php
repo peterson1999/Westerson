@@ -2,7 +2,6 @@
     session_start();
     include 'php/headerDisplay.php';
 ?>
-<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
