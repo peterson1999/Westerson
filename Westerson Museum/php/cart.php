@@ -10,7 +10,7 @@
         foreach($_SESSION['cart'] as $cart){
             $displayCart.=' 
                             <tr>
-                                <td class="si-pic"><img src="data:image/jpeg;base64,'.$cart->photo.'" alt=""></td>
+                                <td class="si-pic"><img src="data:image/jpeg;base64,'.$cart->photo.'" alt="" style="width: 70px; height: 70px;"></td>
                                 <td class="si-text">
                                     <div class="product-selected">
                                         <p>$'.$cart->price.' x '.$cart->qty.'</p>
