@@ -11,7 +11,7 @@
 
         if ($row['count']>0){
             $_SESSION['user'] = $user;
-            header("Location: index.php");
+            header("Location: ".$_SESSION['current-page-url']);
         }
         else{
             $sql = "select count(*) as count from User where Username = '$user'";

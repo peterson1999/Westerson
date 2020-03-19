@@ -1,6 +1,18 @@
 <?php
+    include_once 'php/cartItem.php';
     session_start();
+    include 'php/cart.php';
     include 'php/checkLogin.php';
+    if (isset($_SESSION['user'])){
+        if (isset($_SESSION['current-page-url'])){
+            header("Location: ".$_SESSION['current-page-url']);
+            exit();
+        }
+        else{
+            header("Location: index.php");
+            exit();
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -54,15 +66,7 @@
                         <select class="language_drop" name="countries" id="countries" style="width:300px;">
                             <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
                                 data-title="English">English</option>
-                            <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
-                                data-title="Bangladesh">German </option>
                         </select>
-                    </div>
-                    <div class="top-social">
-                        <a href="#"><i class="ti-facebook"></i></a>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                        <a href="#"><i class="ti-linkedin"></i></a>
-                        <a href="#"><i class="ti-pinterest"></i></a>
                     </div>
                 </div>
             </div>
@@ -88,57 +92,60 @@
                     </div>
                     <div class="col-lg-3 text-right col-lg-3">
                         <ul class="nav-right">
-                            <li class="heart-icon"><a href="#">
-                                    <i class="icon_heart_alt"></i>
-                                    <span>1</span>
-                                </a>
-                            </li>
-                            <li class="cart-icon"><a href="#">
+                            <li class="cart-icon"
+                                <?php
+                                    if (!isset($_SESSION['user'])){
+                                        echo 'style="display:none"';
+                                    }
+                                ?>>
+                                <a href="#">
                                     <i class="icon_bag_alt"></i>
-                                    <span>3</span>
+                                    <span><?php
+                                        if (isset($_SESSION['cart']))
+                                            echo count($_SESSION['cart']);
+                                        else   
+                                            echo 0;
+                                    ?></span>
                                 </a>
                                 <div class="cart-hover">
                                     <div class="select-items">
                                         <table>
                                             <tbody>
-                                                <tr>
-                                                    <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
+                                                <?php
+                                                    if (isset($displayCart)){
+                                                        echo $displayCart;
+                                                    }
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="select-total">
                                         <span>total:</span>
-                                        <h5>$120.00</h5>
+                                        <h5><?php
+                                            if (isset($total) and $total>0){
+                                                echo "\$", number_format($total, 2);
+                                            }
+                                            else{
+                                                echo "-";
+                                            }
+                                        ?></h5>
                                     </div>
                                     <div class="select-button">
                                         <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
+                                        <?php
+                                            if (isset($_SESSION['cart'])){
+                                                if(count($_SESSION['cart'])>0)
+                                                    echo '<a href="checkout.php" class="primary-btn checkout-btn">CHECK OUT</a>';
+                                                else
+                                                    echo '<a href="#" class="primary-btn checkout-btn" style="background:#969a9e" disabled>NOTHING TO CHECK OUT</a>';
+                                            }
+                                            else
+                                                echo '<a href="#" class="primary-btn checkout-btn" style="background:#969a9e" disabled>NOTHING TO CHECK OUT</a>';
+                                            
+                                        ?>
                                     </div>
                                 </div>
                             </li>
-                            <li class="cart-price">$150.00</li>
                         </ul>
                     </div>
                 </div>
@@ -149,40 +156,32 @@
                 <div class="nav-depart">
                     <div class="depart-btn">
                         <i class="ti-menu"></i>
-                        <span>All departments</span>
+                        <span>All Artpieces</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Underwear</a></li>
-                            <li><a href="#">Kid's Clothing</a></li>
-                            <li><a href="#">Brand Fashion</a></li>
-                            <li><a href="#">Accessories/Shoes</a></li>
-                            <li><a href="#">Luxury Brands</a></li>
-                            <li><a href="#">Brand Outdoor Apparel</a></li>
+                            <li class="active"><a href="#">Paintings</a></li>
+                            <li><a href="#">Sculptures</a></li>
+                            <li><a href="#">Ceramics</a></li>
+                            <li><a href="#">Mosaic
+                            </a></li>
                         </ul>
                     </div>
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li><a href="./index.php">Home</a></li>
-                        <li><a href="./shop.html">Shop</a></li>
-                        <li><a href="#">Collection</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Men's</a></li>
-                                <li><a href="#">Women's</a></li>
-                                <li><a href="#">Kid's</a></li>
-                            </ul>
+                        <li class="active"><a href="./index.php">Home</a></li>
+                        <li><a href="./shop.php">Buy</a></li>
+                        <li><a href="#">Sell</a>
+
                         </li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./about.php">About Us</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
                             <ul class="dropdown">
-                                <li><a href="./blog-details.html">Blog Details</a></li>
-                                <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                <li><a href="./check-out.html">Checkout</a></li>
-                                <li><a href="./faq.html">Faq</a></li>
-                                <li><a href="./register.html">Register</a></li>
-                                <li><a href="./login.html">Login</a></li>
+                                <li><a href="./about.php">About Us</a></li>
+                                <li><a href="./shopping-cart.php">Shopping Cart</a></li>
+                                <li><a href="./checkout.php">Checkout</a></li>
+                                <li><a href="./register.php">Register</a></li>
+                                <li><a href="./login.php">Login</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -289,54 +288,37 @@
     <footer class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="index.php"><img src="img/footer-logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
+                            <li>Address: Natalio B. Bacalso Ave, Cebu City, 6000 Cebu</li>
+                            <li>Phone: (032) 261 7741</li>
+                            <li>Email: westerson.museum@gmail.com</li>
                         </ul>
-                        <div class="footer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-3">
+                    <div class="footer-widget">
+                        <h5>Information</h5>
+                        <ul>
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="checkout.php">Checkout</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="faq.php">Frequently Asked Questions</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1">
                     <div class="footer-widget">
-                        <h5>Information</h5>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="footer-widget">
                         <h5>My Account</h5>
                         <ul>
                             <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a href="shopping-cart.php">Shopping Cart</a></li>
+                            <li><a href="shop.php">Shop</a></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="newslatter-item">
-                        <h5>Join Our Newsletter Now</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -346,9 +328,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-text">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Westerson Museum and National Treasury of Art. All rights reserved. 
                         </div>
                         <div class="payment-pic">
                             <img src="img/payment-method.png" alt="">
