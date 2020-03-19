@@ -20,7 +20,7 @@
                     </div>
                     <ul>
                         <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                        <li class="quick-view"><a href="#">+ Quick View</a></li>
+                        <li class="quick-view"><a href="product.php?piece_number='.$row[0].'">+ Quick View</a></li>
                         <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
                     </ul>
                 </div>
@@ -86,7 +86,7 @@ else{
                     </div>
                     <ul>
                         <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                        <li class="quick-view"><a href="#">+ Quick View</a></li>
+                        <li class="quick-view"><a href="product.php?piece_number='.$row[0].'">+ Quick View</a></li>
                         <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
                     </ul>
                 </div>
