@@ -109,7 +109,17 @@
                                     </div>
                                     <div class="select-button">
                                         <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                        <a href="checkout.php" class="primary-btn checkout-btn">CHECK OUT</a>
+                                        <?php
+                                            if (isset($_SESSION['cart'])){
+                                                if(count($_SESSION['cart'])>0)
+                                                    echo '<a href="checkout.php" class="primary-btn checkout-btn">CHECK OUT</a>';
+                                                else
+                                                    echo '<a href="#" class="primary-btn checkout-btn" style="background:#969a9e" disabled>NOTHING TO CHECK OUT</a>';
+                                            }
+                                            else
+                                                echo '<a href="#" class="primary-btn checkout-btn" style="background:#969a9e" disabled>NOTHING TO CHECK OUT</a>';
+                                            
+                                        ?>
                                     </div>
                                 </div>
                             </li>
