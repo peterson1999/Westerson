@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 text-right col-md-2">
+                    <div class="col-lg-2 text-right col-md-2 pt-3">
                         <ul class="nav-right">
                             <li class="cart-icon" 
                                 <?php
