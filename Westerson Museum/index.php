@@ -59,9 +59,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-7 col-md-6">
+                    <div class="col-12 col-lg-6 col-md-5 pt-3">
                         <div class="advanced-search">
-                            <button type="button" class="category-btn">Categories</button>
+                            <!-- <button type="button" class="category-btn">Categories</button> -->
                             <div class="input-group searchBar">
                                 <div class="container">
                                     <div class="row h-100">
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-1 text-right col-md-1">
+                    <div class="col-lg-2 text-right col-md-2">
                         <ul class="nav-right">
                             <li class="cart-icon" 
                                 <?php
