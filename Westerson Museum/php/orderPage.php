@@ -22,7 +22,7 @@
         }
         $totalPrice = $total + 50 + ($total * 0.03);
         foreach($_SESSION as $key => $val){
-            if ($key !== 'user'){
+            if ($key !== 'user' || $key !== 'orderID'){
                 unset($_SESSION[$key]);
             }
         }
