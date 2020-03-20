@@ -6,7 +6,7 @@
         $displayEmail=$_SESSION['email'];
     }
     
-    if (isset($_SESSION['orderID'])){
+    if (isset($_SESSION['orderID']) and !empty($_SESSION['orderID'])){
         $orderID = $_SESSION['orderID'];
         $sql = "SELECT * FROM orderdetails as o JOIN transaction as t ON o.OrderID=t.OrderID WHERE o.OrderID='$orderID'";
         $res = mysqli_query($con, $sql);
@@ -22,10 +22,10 @@
             $total += $rowPiece["Price"] * $row["Qty"];
         }
         $totalPrice = $total + 50 + ($total * 0.03);
-        foreach($_SESSION as $key => $val){
-            if ($key !== 'user' || $key !== 'orderID'){
-                unset($_SESSION[$key]);
-            }
-        }
+        $_SESSION['checkout-finished'] = true;
+    }
+    else{
+        header("Location: shopping-cart.php");
+        exit();
     }
 ?>

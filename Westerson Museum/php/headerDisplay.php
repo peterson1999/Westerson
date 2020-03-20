@@ -66,16 +66,25 @@
     }
     if (isset($_POST['btnLogout'])){
         $_SESSION['user']=null;
+        $curPageUrl = $_SESSION['current-page-url'];
         foreach($_SESSION as $key => $val){
-            unset($_SESSION[$key]);
+            if ($key!='current-page-url')
+                unset($_SESSION[$key]);
         }
+        $_SESSION['current-page-url'] = $curPageUrl;
         header("Location: ".$_SERVER['REQUEST_URI']);
+        exit();
     }
-    if (isset($_SESSION['checkout-finished']) and $_SESSION['checkout-finished']==true){
-        foreach($_SESSION as $key => $val){
-            if ($key !== 'user'){
+    if (strpos($_SERVER['PHP_SELF'], 'checkout') != true){
+        if (isset($_SESSION['checkout-finished']) and $_SESSION['checkout-finished']==true){
+            $user = $_SESSION['user'];
+            $curPageUrl = $_SESSION['current-page-url'];
+            foreach($_SESSION as $key => $val){
                 unset($_SESSION[$key]);
             }
+            $_SESSION['user'] = $user;
+            $_SESSION['current-page-url'] = $curPageUrl;
         }
     }
+    
 ?>

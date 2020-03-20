@@ -8,7 +8,6 @@
         exit();
     }
     include 'php/orderPage.php';
-    $_SESSION['checkout-finished'] = true;
 ?>
 <!DOCTYPE html>
 <html lang="zxx">

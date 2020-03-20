@@ -1,7 +1,8 @@
 <?php
     require 'FPDF/fpdf17/fpdf.php';
+    session_start();
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
-    // $orderID = '124120032020052918';
+    
     if (isset($_SESSION['orderID'])){
         $orderID = $_SESSION['orderID'];
         $sql = "SELECT * FROM orderdetails as o JOIN transaction as t ON o.OrderID=t.OrderID WHERE o.OrderID='$orderID'";
@@ -44,13 +45,25 @@
         $pdf->Cell(100	,5,'Bill to:',0,1);//end of line
         //add dummy cell at beginning of each line for indentation
         $pdf->Cell(10	,5,'',0,0);
-        $pdf->Cell(90	,5,'name',0,1);//end of line
+        $pdf->Cell(90	,5,$_SESSION['fName']." ".$_SESSION['lName'],0,1);//end of line
+        
+        if (!empty($_SESSION['comName'])){
+            $pdf->Cell(10	,5,'',0,0);
+            $pdf->Cell(90	,5,$_SESSION['comName'],0,1);//endl
+        }
+
         $pdf->Cell(10	,5,'',0,0);
-        $pdf->Cell(90	,5,'company',0,1);//endl
+        $pdf->Cell(90	,5,$_SESSION['addressL1'],0,1);//endl
+        if (!empty($_SESSION['addressL2'])){
+            $pdf->Cell(10	,5,'',0,0);
+            $pdf->Cell(90	,5,$_SESSION['addressL2'],0,1);//endl
+        }
+
         $pdf->Cell(10	,5,'',0,0);
-        $pdf->Cell(90	,5,'address',0,1);//endl
+        $pdf->Cell(90	,5,$_SESSION['country'],0,1);//endl
+        
         $pdf->Cell(10	,5,'',0,0);
-        $pdf->Cell(90	,5,'phone',0,1);//endl
+        $pdf->Cell(90	,5,$_SESSION['phone'],0,1);//endl
         //spacing
         $pdf->Cell(189	,10,'',0,1);//end of line
 
@@ -106,7 +119,8 @@
         $pdf->Cell(4	,5,'$',0,0);
         $pdf->Cell(45	,5,number_format($totalPrice,2),0,1,'R');//endl
 
-        $pdf->Output();
+        $pdf->Output('OrderInvoice.pdf', 'I');
 
     }
+    
 ?>
