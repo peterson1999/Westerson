@@ -1,12 +1,22 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
     $display = "";
-
+    $user=$_SESSION['user'];
+    $sql = "SELECT UserID FROM user WHERE Username = '$user'";
+    $result =  mysqli_query($con, $sql);
+    if (!$result){
+        die("BAD!");
+    }
+   else{
+        $row = mysqli_fetch_array($result);
+        $userid = $row['UserID'];
+    }
     
     if(isset($_GET['category'])){
         $category= $_GET['category']; 
-    $sql = "SELECT * FROM artpiece WHERE TypeofArt = '$category' ";
+    $sql = "SELECT * FROM artpiece WHERE TypeofArt = '$category' AND SellerID != '$userid' ";
     $result = mysqli_query($con,$sql);
+    
 
    
     while($row = mysqli_fetch_array($result)){
@@ -71,7 +81,7 @@
 }
 
 else{
-    $sql = "SELECT * FROM artpiece";
+    $sql = "SELECT * FROM artpiece WHERE SellerID != '$userid'";
     $result = mysqli_query($con,$sql);
 
    
