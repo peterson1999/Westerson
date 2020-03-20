@@ -66,7 +66,16 @@
     }
     if (isset($_POST['btnLogout'])){
         $_SESSION['user']=null;
-        $_SESSION['name']=null;
+        foreach($_SESSION as $key => $val){
+            unset($_SESSION[$key]);
+        }
         header("Location: ".$_SERVER['REQUEST_URI']);
+    }
+    if (isset($_SESSION['checkout-finished']) and $_SESSION['checkout-finished']==true){
+        foreach($_SESSION as $key => $val){
+            if ($key !== 'user'){
+                unset($_SESSION[$key]);
+            }
+        }
     }
 ?>

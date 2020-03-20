@@ -199,40 +199,40 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="fir">First Name<span>*</span></label>
-                                <input type="text" id="fir" required>
+                                <input type="text" id="fir" name="fName" required>
                             </div>
                             <div class="col-lg-6">
                                 <label for="last">Last Name<span>*</span></label>
-                                <input type="text" id="last" required>
+                                <input type="text" id="last" name="lName" required>
                             </div>
                             <div class="col-lg-12">
                                 <label for="cun-name">Company Name</label>
-                                <input type="text" id="cun-name">
+                                <input type="text" id="cun-name" name="comName">
                             </div>
                             <div class="col-lg-12">
                                 <label for="cun">Country<span>*</span></label>
-                                <input type="text" id="cun" required>
+                                <input type="text" id="cun" name="country" required>
                             </div>
                             <div class="col-lg-12">
                                 <label for="street">Street Address<span>*</span></label>
-                                <input type="text" id="street" class="street-first" required>
-                                <input type="text">
+                                <input type="text" id="street" class="street-first" name="addressLine1" required>
+                                <input type="text" name="addressLine2">
                             </div>
                             <div class="col-lg-12">
                                 <label for="zip">Postcode / ZIP (optional)</label>
-                                <input type="text" id="zip">
+                                <input type="text" id="zip" name="zip">
                             </div>
                             <div class="col-lg-12">
                                 <label for="town">Town / City<span>*</span></label>
-                                <input type="text" id="town" required>
+                                <input type="text" id="town" name="town" required>
                             </div>
                             <div class="col-lg-6">
                                 <label for="email">Email Address<span>*</span></label>
-                                <input type="text" id="email" required>
+                                <input type="text" id="email" name="email" required>
                             </div>
                             <div class="col-lg-6">
                                 <label for="phone">Phone<span>*</span></label>
-                                <input type="text" id="phone" required>
+                                <input type="text" id="phone" name="phone" required>
                             </div>
                         </div>
                     </div>
