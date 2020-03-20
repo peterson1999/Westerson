@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/correction.css" type="text/css">
 </head>
 
 <body>
@@ -48,29 +49,35 @@
             </div>
         </div>
         <div class="container">
-            <div class="inner-header">
-                <div class="row">
-                    <div class="col-2 col-lg-2 col-md-2">
-                        <div style="    padding: 12px 0;
-                        position: absolute;
-                        top: -22px;"class="logo">
-                            <a href="./index.php">
+            <div class="inner-header py-2">
+                <div class="row m-0">
+                    <div class="col-12 col-lg-4 col-md-5">
+                        <div class="logo">
+                            <a href="./index.php" class=" text-dark" style="font-size:20px">
                                 <img style="max-height: 61px;"src="img/Logo.jpg" alt="">
-                                
+                                Westerson Museum
                             </a>
                         </div>
                     </div>
-                    <div class="col-10 col-lg-7 col-md-7">
+                    <div class="col-12 col-lg-6 col-md-5 pt-3">
                         <div class="advanced-search">
-                            <button type="button" class="category-btn">All Categories</button>
-                            <div class="input-group">
-                                <input type="text" placeholder="What do you need?">
-                                <button style="    border: 1px solid #968c7a;
-                                background: #262626;"type="button"><i class="ti-search"></i></button>
+                            <div class="input-group searchBar">
+                                <form method="POST" class="w-100">
+                                    <div class="container h-100">
+                                        <div class="row h-100">
+                                            <div class="col-10">
+                                                <input type="text" placeholder="What do you need?" name="searchBar">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="submit" style="height: 100%" name="btnSearch"><i class="ti-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 text-right col-md-3">
+                    <div class="col-lg-2 text-right col-md-2 pt-3">
                         <ul class="nav-right">
                             <li class="cart-icon" 
                                 <?php
@@ -78,7 +85,7 @@
                                         echo 'style="display:none"';
                                     }
                                 ?>>
-                                <a href="#">
+                                <a href="shopping-cart.php">
                                     <i class="icon_bag_alt"></i>
                                     <span><?php
                                         if (isset($_SESSION['cart']))
@@ -111,7 +118,7 @@
                                         ?></h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
+                                        <a href="shopping-cart.php" class="primary-btn view-card">VIEW CART</a>
                                         <?php
                                             if (isset($_SESSION['cart'])){
                                                 if(count($_SESSION['cart'])>0)
