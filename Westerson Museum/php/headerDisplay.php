@@ -86,5 +86,40 @@
             $_SESSION['current-page-url'] = $curPageUrl;
         }
     }
-    
+    if (isset($_POST['btnSearch'])){
+        $search = $_POST['searchBar'];
+        $search = strtolower($search);
+        $search = '%'.$search.'%';
+        $sql = "SELECT PieceNumber FROM artpiece WHERE lower(Name) LIKE '$search'";
+        $res = mysqli_query($con, $sql);
+        $data;
+        $found=false;
+        while($row = mysqli_fetch_array($res)){
+            $piece = array($row['PieceNumber']);
+            if (!empty($data)){
+                $data = array_merge($data, $piece);
+            }
+            else{
+                $data = $piece;
+            }
+            $found=true;
+        }
+        if ($found==false){
+            $sql = "SELECT PieceNumber FROM artpiece WHERE lower(TypeofArt) LIKE '$search'";
+            $res = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($res)){
+                $piece = array($row['PieceNumber']);
+                if (!empty($data)){
+                    $data = array_merge($data, $piece);
+                }
+                else{
+                    $data = $piece;
+                }
+                $found=true;
+            }
+        }
+        $query = http_build_query(array('pieceNo' => $data));
+        header("Location: shop.php?search=".$query);
+        exit();
+    }
 ?>

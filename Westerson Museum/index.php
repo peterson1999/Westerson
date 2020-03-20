@@ -65,12 +65,14 @@
                             <div class="input-group searchBar">
                                 <div class="container">
                                     <div class="row h-100">
-                                        <div class="col-10">
-                                            <input type="text" placeholder="What do you need?">
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" style="height: 100%"><i class="ti-search"></i></button>
-                                        </div>
+                                        <form method="POST">
+                                            <div class="col-10">
+                                                <input type="text" placeholder="What do you need?" name="searchBar">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="submit" style="height: 100%" name="btnSearch"><i class="ti-search"></i></button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +86,7 @@
                                         echo 'style="display:none"';
                                     }
                                 ?>>
-                                <a href="#">
+                                <a href="shopping-cart.php">
                                     <i class="icon_bag_alt"></i>
                                     <span><?php
                                         if (isset($_SESSION['cart']))
@@ -117,7 +119,7 @@
                                         ?></h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
+                                        <a href="shopping-cart.php" class="primary-btn view-card">VIEW CART</a>
                                         <?php
                                             if (isset($_SESSION['cart'])){
                                                 if(count($_SESSION['cart'])>0)
