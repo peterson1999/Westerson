@@ -62,23 +62,29 @@
 
     //add to cart
     if (isset($_POST['btnAddCart'])){
-        $cartQty = $_POST['cartQty'];
-        $cartID = 0;
-        
-        if (!empty($_SESSION['cart'])){
-            $cartID = count($_SESSION['cart']);
+        if (!isset($_SESSION['user'])){
+            header("Location: login.php");
+            exit();
         }
-        $item = new cartItem($row['PieceNumber'], $row['Name'], $row['Price'], $cartQty, $displayPhoto, $cartID);
-        $itemArray = array($item);
-        
-        if(!empty($_SESSION['cart'])) {
-            $_SESSION['cart'] = array_merge($_SESSION['cart'],$itemArray);
-        } 
-        else {
-            $_SESSION['cart'] = $itemArray;
+        else{
+            $cartQty = $_POST['cartQty'];
+            $cartID = 0;
+            
+            if (!empty($_SESSION['cart'])){
+                $cartID = count($_SESSION['cart']);
+            }
+            $item = new cartItem($row['PieceNumber'], $row['Name'], $row['Price'], $cartQty, $displayPhoto, $cartID);
+            $itemArray = array($item);
+            
+            if(!empty($_SESSION['cart'])) {
+                $_SESSION['cart'] = array_merge($_SESSION['cart'],$itemArray);
+            } 
+            else {
+                $_SESSION['cart'] = $itemArray;
+            }
+            
+            header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);
         }
-        
-        header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);
     }
 
     //remove item from cart

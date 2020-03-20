@@ -1,6 +1,11 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
     $displayOrder="";
+    
+    if (isset($_SESSION['email'])){
+        $displayEmail=$_SESSION['email'];
+    }
+    
     if (isset($_SESSION['orderID'])){
         $orderID = $_SESSION['orderID'];
         $sql = "SELECT * FROM orderdetails as o JOIN transaction as t ON o.OrderID=t.OrderID WHERE o.OrderID='$orderID'";

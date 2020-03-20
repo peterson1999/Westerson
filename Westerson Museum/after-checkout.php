@@ -197,20 +197,23 @@
                     <div class="col-lg-6">
                         <h1 class="text-success icon_check_alt2 text-center mb-2"></h1>
                         <h4 class="text-center mb-1">Your artwork is on its way!</h4>
-                        <h5 class="text-center text-muted mb-4">Thank you for supporting Westerson Museum! 
-                            An email confirming your order has been sent to 
+                        <h5 class="text-center text-muted mb-4">Thank you for supporting Westerson Museum!
+                            <br>Our goal is to be able to create a community that can help revitalize the world's love for art.<br>
+                            <br>An email confirming your order has been sent to 
                             <?php
+                                if (isset($displayEmail)){
+                                    echo $displayEmail;
+                                }
                             ?>.</h5>
                         <div class="row">
                         <div class="col-lg-2 mb-2"></div>
                             <div class="col-lg-8 text-center mb-2">
                                 <a href="shop.php" class="primary-btn checkout-btn">Keep Shopping</a>
-                                <!-- <button>Keep Shopping</button> -->
                             </div>
                             <div class="col-lg-2 mb-2"></div>
                             <div class="col-lg-2"></div>
                             <div class="col-lg-8 text-center">
-                                <button href="#" class="primary-btn view-card bg-secondary">Print Receipt</button>
+                                <button type="submit" class="primary-btn view-card bg-secondary border-0" name="prtReceipt">&#128438; Print Receipt</button>
                             </div>
                         </div>
                     </div>
