@@ -76,11 +76,21 @@
             $item = new cartItem($row['PieceNumber'], $row['Name'], $row['Price'], $cartQty, $displayPhoto, $cartID);
             $itemArray = array($item);
             
-            if(!empty($_SESSION['cart'])) {
-                $_SESSION['cart'] = array_merge($_SESSION['cart'],$itemArray);
-            } 
-            else {
-                $_SESSION['cart'] = $itemArray;
+            $isFound=false;
+            foreach($_SESSION['cart'] as $cart){
+                if ($cart->id == $item->id){
+                    $cart->qty += $item->qty;
+                    $isFound=true;
+                break;
+                }
+            }
+            if ($isFound==false){
+                if(!empty($_SESSION['cart'])) {
+                    $_SESSION['cart'] = array_merge($_SESSION['cart'],$itemArray);
+                } 
+                else {
+                    $_SESSION['cart'] = $itemArray;
+                }
             }
             
             header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);
