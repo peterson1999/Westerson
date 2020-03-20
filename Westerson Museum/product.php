@@ -2,6 +2,8 @@
     include_once 'php/cartItem.php';
     session_start();
     include 'php/cart.php';
+    include 'php/headerDisplay.php';
+    $_SESSION['current-page-url'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
