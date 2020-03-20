@@ -83,11 +83,13 @@
 elseif (isset($_GET['search'])){
     $str = $_GET['search'];
     parse_str($str);
+    $count=0;
     foreach($pieceNo as $piece){
         $sql = "SELECT * FROM artpiece WHERE PieceNumber = $piece AND SellerID != $userid";
         $result = mysqli_query($con,$sql);
         $row = mysqli_fetch_array($result);
-        $display.='                         <div class="col-lg-4 col-sm-6">
+        if ($row != null){
+            $display.='                         <div class="col-lg-4 col-sm-6">
             <div class="product-item">
                 <div class="pi-pic">
                     <img src="data:image/jpeg;base64,'.base64_encode( $row['6'] ).'" alt="">
@@ -113,7 +115,18 @@ elseif (isset($_GET['search'])){
                 </div>
             </div>
         </div>';
+            $count++;
+        }
     }
+    if ($count==0){
+        $display.='<div class="col-12 text-center mb-5">Oops! Looks like we don\'t have what you\'re looking for.</div>';
+    }
+    $displaycat ="";
+    $displaycat.=            '            <li><a href = "shop.php?category=paintings">Paintings</a></li>
+    <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+    <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+    <li><a href="shop.php?category=mosaic">Mosaic
+    </a></li>';
 }
 
 else{

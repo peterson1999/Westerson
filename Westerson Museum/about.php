@@ -62,18 +62,19 @@
                     </div>
                     <div class="col-12 col-lg-6 col-md-5 pt-3">
                         <div class="advanced-search">
-                            <!-- <button type="button" class="category-btn">Categories</button> -->
                             <div class="input-group searchBar">
-                                <div class="container">
-                                    <div class="row h-100">
-                                        <div class="col-10">
-                                            <input type="text" placeholder="What do you need?">
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" style="height: 100%"><i class="ti-search"></i></button>
+                                <form method="POST" class="w-100">
+                                    <div class="container h-100">
+                                        <div class="row h-100">
+                                            <div class="col-10">
+                                                <input type="text" placeholder="What do you need?" name="searchBar">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="submit" style="height: 100%" name="btnSearch"><i class="ti-search"></i></button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
