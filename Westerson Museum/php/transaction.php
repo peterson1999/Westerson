@@ -15,23 +15,28 @@
         $shortDate = date("d",strtotime($date)).date("m",strtotime($date)).date("Y",strtotime($date));
         $time = date("H",strtotime($date)).date("i",strtotime($date)).date("s",strtotime($date));
         $id = $shortDate.$time; //for orderID, formatted date
+        
         //necessary variables for later
         $user = $_SESSION['user'];
         $code = $_POST['coupon-code'];
         $totalPrice = $_SESSION['total-price'];
         $transactType = $_POST['transact-type'];
+        
         //get buyer
         $sql = "SELECT UserID FROM user WHERE Username='$user'";
         $res = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($res);
         $buyer = $row[0];
+        
         //orderid = buyerid + datetime format, saved to session for after-checkout.php
         $id = $buyer.$id;
         $_SESSION['orderID'] = $id;
+        
         //add order to orderdetails, this one first since orderID is foreign key in transaction
         $sql = "INSERT INTO orderdetails (OrderID, DatePurchased, VoucherCode, TotalPrice) 
                 VALUES ('$id', '$date', '$code', $totalPrice)";
         mysqli_query($con, $sql);
+        
         //add each item in cart to transaction
         foreach($_SESSION['cart'] as $cart){
             $pieceNo = $cart->id;
@@ -39,8 +44,22 @@
                     VALUES ('$id', $cart->price, '$transactType', $cart->qty, $buyer, $pieceNo)";
             $res = mysqli_query($con, $sql);
         }
+        
         //free session cart
         unset($_SESSION['cart']);
+
+        //store billing details for pdf receipt
+        $_SESSION['fName']    = $_POST['fName'];
+        $_SESSION['lName']    = $_POST['lName'];
+        $_SESSION['comName']  = $_POST['comName'];
+        $_SESSION['country']  = $_POST['country'];
+        $_SESSION['addressL1']= $_POST['addressLine1'];
+        $_SESSION['addressL2']= $_POST['addressLine2'];
+        $_SESSION['zip']      = $_POST['zip'];
+        $_SESSION['town']     = $_POST['town'];
+        $_SESSION['email']    = $_POST['email'];
+        $_SESSION['phone']    = $_POST['phone'];
+
         header("Location: after-checkout.php");
         exit();
     }

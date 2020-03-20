@@ -200,7 +200,7 @@
                                 <thead>
                                     <tr>
                                         <th>Image</th>
-                                        <th class="p-name">Art Piece</th>
+                                        <th>Art Piece</th>
                                         <th>Price</th>
                                         <th>Quantity</th>
                                         <th>Total</th>

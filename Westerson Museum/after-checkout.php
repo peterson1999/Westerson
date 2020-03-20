@@ -213,7 +213,7 @@
                             <div class="col-lg-2 mb-2"></div>
                             <div class="col-lg-2"></div>
                             <div class="col-lg-8 text-center">
-                                <button type="submit" class="primary-btn view-card bg-secondary border-0" name="prtReceipt">&#128438; Print Receipt</button>
+                                <a href="php/invoice.php" target="_blank" class="primary-btn view-card bg-secondary" name="prtReceipt">&#128438; Generate Receipt</a>
                             </div>
                         </div>
                     </div>

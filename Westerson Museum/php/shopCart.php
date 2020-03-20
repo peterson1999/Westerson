@@ -47,6 +47,9 @@
             $rowCount++;
         }
     }
+    else{
+        $displayShopCart.='<tr><td colspan=6>Nothing to show here.</td></tr>';
+    }
     if (isset($_POST['cartUpdateBtn'])){
         foreach($_SESSION['cart'] as $cart){
             if (isset($_POST[''.$cart->cartID])){
@@ -54,6 +57,7 @@
             }
         }
         header("Location: shopping-cart.php");
+        exit();
     }
     if (isset($_POST['toCheckoutBtn'])){
         foreach($_SESSION['cart'] as $cart){
@@ -62,5 +66,6 @@
             }
         }
         header("Location: checkout.php");
+        exit();
     }
 ?>
