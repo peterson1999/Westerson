@@ -1,6 +1,6 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
-    $display = "";
+    $displayArt = "";
     $user=$_SESSION['user'];
     $sql = "SELECT UserID FROM user WHERE Username = '$user'";
     $result =  mysqli_query($con, $sql);
@@ -20,7 +20,7 @@
 
    
     while($row = mysqli_fetch_array($result)){
-            $display.='                         <div class="col-lg-4 col-sm-6">
+            $displayArt.='                         <div class="col-lg-4 col-sm-6">
             <div class="product-item">
                 <div class="pi-pic">
                     <img src="data:image/jpeg;base64,'.base64_encode( $row['6'] ).'" alt="">
@@ -89,7 +89,7 @@ elseif (isset($_GET['search'])){
         $result = mysqli_query($con,$sql);
         $row = mysqli_fetch_array($result);
         if ($row != null){
-            $display.='                         <div class="col-lg-4 col-sm-6">
+            $displayArt.='                         <div class="col-lg-4 col-sm-6">
             <div class="product-item">
                 <div class="pi-pic">
                     <img src="data:image/jpeg;base64,'.base64_encode( $row['6'] ).'" alt="">
@@ -119,7 +119,7 @@ elseif (isset($_GET['search'])){
         }
     }
     if ($count==0){
-        $display.='<div class="col-12 text-center mb-5">Oops! Looks like we don\'t have what you\'re looking for.</div>';
+        $displayArt.='<div class="col-12 text-center mb-5">Oops! Looks like we don\'t have what you\'re looking for.</div>';
     }
     $displaycat ="";
     $displaycat.=            '            <li><a href = "shop.php?category=paintings">Paintings</a></li>
@@ -135,7 +135,7 @@ else{
 
    
     while($row = mysqli_fetch_array($result)){
-            $display.='                         <div class="col-lg-4 col-sm-6">
+            $displayArt.='                         <div class="col-lg-4 col-sm-6">
             <div class="product-item">
                 <div class="pi-pic">
                     <img src="data:image/jpeg;base64,'.base64_encode( $row['6'] ).'" alt="">
