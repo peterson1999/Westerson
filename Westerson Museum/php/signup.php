@@ -29,24 +29,41 @@
             $mailAdd = $_POST['mailAdd1']."\n".$_POST['mailAdd2'];
             $fullName = $fname." ".$lname;
             
-            $sql =  "insert into User(Username, Pass, firstName, lastName) values ('$user', '$pass', 
-                    '$fname', '$lname')";
-            mysqli_query($con, $sql);
-
-            $sql =  "select UserID from User where Username = '$user'";
+            $sql = "select count(*) as count from Buyer where Email = '$email'";
             $result = mysqli_query($con, $sql);
             $row = mysqli_fetch_array($result);
-            $id = $row['UserID'];
 
-            $sql =  "insert into Buyer(BuyerID, Name, Phone_number, Email, Mailing_address) 
-                    values ($id, '$fullName', '$phone', '$email', '$mailAdd')";
-            mysqli_query($con, $sql);
+            if ($row[0]>0){
+                $display.= '<div class="container mb-3">
+                            <div class="row">
+                                <div class="col-lg-2"></div>
+                                <div class="col-12 col-lg-8 py-2 bg-danger text-light text-center rounded">
+                                    This email already belongs to another account.
+                                </div>
+                                <div class="col-lg-2"></div>
+                            </div>
+                        </div>';
+            }
+            else{
+                $sql =  "insert into User(Username, Pass, firstName, lastName) values ('$user', '$pass', 
+                '$fname', '$lname')";
+                mysqli_query($con, $sql);
 
-            $sql =  "insert into Seller(SellerID, Name, Phone_number, Email, Mailing_address) 
-                    values ($id, '$fullName', '$phone', '$email', '$mailAdd')";
-            mysqli_query($con, $sql);
-            $_SESSION['user']=$user;
-            header("Location: index.html");
+                $sql =  "select UserID from User where Username = '$user'";
+                $result = mysqli_query($con, $sql);
+                $row = mysqli_fetch_array($result);
+                $id = $row['UserID'];
+
+                $sql =  "insert into Buyer(BuyerID, Name, Phone_number, Email, Mailing_address) 
+                        values ($id, '$fullName', '$phone', '$email', '$mailAdd')";
+                mysqli_query($con, $sql);
+
+                $sql =  "insert into Seller(SellerID, Name, Phone_number, Email, Mailing_address) 
+                        values ($id, '$fullName', '$phone', '$email', '$mailAdd')";
+                mysqli_query($con, $sql);
+                $_SESSION['user']=$user;
+                header("Location: index.html");
+            }
         }
     }
 ?>
