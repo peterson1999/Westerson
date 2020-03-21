@@ -1,8 +1,8 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
     $displayArt = "";
-    $user=$_SESSION['user'];
     if (isset($_SESSION['user'])){
+        $user=$_SESSION['user'];
         $sql = "SELECT UserID FROM user WHERE Username = '$user'";
         $result =  mysqli_query($con, $sql);
         if (!$result){
