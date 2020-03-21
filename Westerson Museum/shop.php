@@ -148,10 +148,12 @@
                         <i class="ti-menu"></i>
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
-                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
-                        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
-                        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
-                        <li><a href="shop.php?category=mosaic">Mosaic</a></li>
+                        <?php
+                                            if (isset($displaycat) ){
+                                                echo $displaycat;
+                                            }
+                                       
+                                        ?>
                         </ul>
                     </div>
                 </div>
