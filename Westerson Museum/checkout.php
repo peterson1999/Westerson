@@ -150,28 +150,24 @@
                         <i class="ti-menu"></i>
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Paintings</a></li>
-                            <li><a href="#">Sculptures</a></li>
-                            <li><a href="#">Ceramics</a></li>
-                            <li><a href="#">Mosaic
-                            </a></li>
+                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
+                        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+                        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+                        <li><a href="shop.php?category=mosaic">Mosaic</a></li>
                         </ul>
                     </div>
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.php">Home</a></li>
+                        <li><a href="./index.php">Home</a></li>
                         <li><a href="./shop.php">Buy</a></li>
-                        <li><a href="#">Sell</a>
-
-                        </li>
                         <li><a href="./about.php">About Us</a></li>
                         <li><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
                             <ul class="dropdown">
                                 <li><a href="./about.php">About Us</a></li>
                                 <li><a href="./shopping-cart.php">Shopping Cart</a></li>
-                                <li><a href="./checkout.php">Checkout</a></li>
+                                <li class="active"><a href="./checkout.php">Checkout</a></li>
                                 <li><a href="./register.php">Register</a></li>
                                 <li><a href="./login.php">Login</a></li>
                             </ul>
@@ -248,9 +244,6 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="checkout-content">
-                            <input type="text" placeholder="Enter Your Coupon Code" name="coupon-code" value="">
-                        </div>
                         <div class="place-order">
                             <h4>Your Order</h4>
                             <div class="order-total">
@@ -312,7 +305,15 @@
                                     </div>
                                 </div>
                                 <div class="order-btn">
-                                    <button type="submit" class="site-btn place-btn" name="orderCheckout">Place Order</button>
+                                    <?php
+                                        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+                                            echo '<button type="submit" class="site-btn place-btn" name="orderCheckout">Place Order</button>';
+                                        }
+                                        else{
+                                            echo '<button type="submit" class="site-btn place-btn" disabled>No Items to Check Out</button>';
+                                        }
+                                    ?>
+                                    
                                 </div>
                             </div>
                         </div>

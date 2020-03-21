@@ -147,10 +147,9 @@
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
                         <li><a href = "shop.php?category=paintings">Paintings</a></li>
-        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
-        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
-        <li><a href="shop.php?category=mosaic">Mosaic
-        </a></li>
+                        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+                        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+                        <li><a href="shop.php?category=mosaic">Mosaic</a></li>
                         </ul>
                     </div>
                 </div>
@@ -158,9 +157,6 @@
                     <ul>
                         <li class="active"><a href="./index.php">Home</a></li>
                         <li><a href="./shop.php">Buy</a></li>
-                        <!-- <li><a href="#">Sell</a>
-
-                        </li> -->
                         <li><a href="./about.php">About Us</a></li>
                         <li><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
@@ -183,7 +179,7 @@
     <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="hero-items owl-carousel">
-            <div class="single-hero-items set-bg" data-setbg="img/painting-3.jpg">
+            <div class="single-hero-items set-bg" data-setbg="img/painting-1.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
@@ -194,9 +190,6 @@
                             <a href="shop.php" class="primary-btn">Shop Now</a>
                         </div>
                     </div>
-                    <!-- <div class="off-card">
-                        <h2>Sale <span>50%</span></h2>
-                    </div> -->
                 </div>
             </div>
             <div class="single-hero-items set-bg" data-setbg="img/painting-2.jpg">
@@ -210,9 +203,6 @@
                             <a href="shop.php?category=paintings" class="primary-btn">Shop Now</a>
                         </div>
                     </div>
-                    <!-- <div class="off-card">
-                        <h2>Sale <span>50%</span></h2>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -220,156 +210,6 @@
     <br>
     <br>
     <!-- Hero Section End -->
-
-    <!-- Banner Section Begin -->
-    <!-- <div class="banner-section spad">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="img/painting.jpg" alt="">
-                        <div class="inner-text">
-                            <h4>Men’s</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="img/banner-2.jpg" alt="">
-                        <div class="inner-text">
-                            <h4>Women’s</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="img/banner-3.jpg" alt="">
-                        <div class="inner-text">
-                            <h4>Kid’s</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Banner Section End -->
-
-    <!-- Women Banner Section Begin -->
-    <!-- <section class="women-banner spad">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="product-large set-bg" data-setbg="img/products/women-large.jpg">
-                        <h2>Women’s</h2>
-                        <a href="#">Discover More</a>
-                    </div>
-                </div>
-                <div class="col-lg-8 offset-lg-1">
-                    <div class="filter-control">
-                        <ul>
-                            <li class="active">Clothings</li>
-                            <li>HandBag</li>
-                            <li>Shoes</li>
-                            <li>Accessories</li>
-                        </ul>
-                    </div>
-                    <div class="product-slider owl-carousel">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/women-1.jpg" alt="">
-                                <div class="sale">Sale</div>
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="#">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.00
-                                    <span>$35.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/women-2.jpg" alt="">
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Shoes</div>
-                                <a href="#">
-                                    <h5>Guangzhou sweater</h5>
-                                </a>
-                                <div class="product-price">
-                                    $13.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/women-3.jpg" alt="">
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Towel</div>
-                                <a href="#">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $34.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/women-4.jpg" alt="">
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Towel</div>
-                                <a href="#">
-                                    <h5>Converse Shoes</h5>
-                                </a>
-                                <div class="product-price">
-                                    $34.00
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- Women Banner Section End -->
 
     <!-- Deal Of The Week Section Begin-->
     <section class="deal-of-week set-bg spad" data-setbg="img/david.jpg">
@@ -416,111 +256,13 @@
                 
                     <div class="filter-control">
                     <h2 style="color:#a2a2a2"> Featured </h2>
-                        <!-- <ul>
-                            <li class="active">Clothings</li>
-                            <li>HandBag</li>
-                            <li>Shoes</li>
-                            <li>Accessories</li>
-                        </ul> -->
                     </div> 
                     <div class="product-slider owl-carousel">
-                
-                    <?php
+                        <?php
                             if(isset($display1)){
                                 echo $display1;
                             }
                         ?>
-                       
-                        <!-- <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/man-1.jpg" alt="">
-                                <div class="sale">Sale</div>
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="#">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.00
-                                    <span>$35.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/man-2.jpg" alt="">
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Shoes</div>
-                                <a href="#">
-                                    <h5>Guangzhou sweater</h5>
-                                </a>
-                                <div class="product-price">
-                                    $13.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/man-3.jpg" alt="">
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Towel</div>
-                                <a href="#">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $34.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="img/products/man-4.jpg" alt="">
-                                <div class="icon">
-                                    <i class="icon_heart_alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Towel</div>
-                                <a href="#">
-                                    <h5>Converse Shoes</h5>
-                                </a>
-                                <div class="product-price">
-                                    $34.00
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3 offset-lg-1">
@@ -534,48 +276,7 @@
     </section>
     <!-- Man Banner Section End -->
 
-    <!-- Instagram Section Begin -->
-    <!-- <div class="instagram-photo">
-        <div class="insta-item set-bg" data-setbg="img/insta-1.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="img/insta-2.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="img/insta-3.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="img/insta-4.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="img/insta-5.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="img/insta-6.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">colorlib_Collection</a></h5>
-            </div>
-        </div>
-    </div> -->
-    <!-- Instagram Section End -->
-
-    <!-- Latest Blog Section Begin -->
+    <!-- Latest Section Begin -->
     <section class="latest-blog spad">
         <div class="container">
             <div class="row">
@@ -595,10 +296,6 @@
                                     <i class="fa fa-calendar-o"></i>
                                     May 4,2019
                                 </div>
-                                <!-- <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i>
-                                    5
-                                </div> -->
                             </div>
                             <a href="about.php#mission">
                                 <h4>Our Mission</h4>
@@ -616,10 +313,6 @@
                                     <i class="fa fa-calendar-o"></i>
                                     May 4,2019
                                 </div>
-                                <!-- <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i>
-                                    5
-                                </div> -->
                             </div>
                             <a href="about.php#vision">
                                 <h4>Our Vision</h4>
@@ -637,10 +330,6 @@
                                     <i class="fa fa-calendar-o"></i>
                                     May 4,2019
                                 </div>
-                                <!-- <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i>
-                                    5
-                                </div> -->
                             </div>
                             <a href="about.php#service">
                                 <h4>Our Service</h4>
@@ -658,8 +347,8 @@
                                 <img src="img/icon-1.png" alt="">
                             </div>
                             <div class="sb-text">
-                                <h6>Free Shipping</h6>
-                                <p>For all order over 99$</p>
+                                <h6>Only $50.00 Shipping</h6>
+                                <p>For all orders over 99$</p>
                             </div>
                         </div>
                     </div>
@@ -670,7 +359,7 @@
                             </div>
                             <div class="sb-text">
                                 <h6>Delivery On Time</h6>
-                                <p>If good have prolems</p>
+                                <p>Quality assurance is something we pride on.</p>
                             </div>
                         </div>
                     </div>
@@ -689,7 +378,7 @@
             </div>
         </div>
     </section>
-    <!-- Latest Blog Section End -->
+    <!-- Latest Section End -->
 
     <!-- Partner Logo Section Begin -->
     <div class="partner-logo">

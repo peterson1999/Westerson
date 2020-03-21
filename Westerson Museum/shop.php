@@ -148,35 +148,26 @@
                         <i class="ti-menu"></i>
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
-                        <?php
-                            if(isset($displaycat)){
-                                echo $displaycat;
-                            }
-                        ?>
+                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
+                        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+                        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+                        <li><a href="shop.php?category=mosaic">Mosaic</a></li>
                         </ul>
                     </div>
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./shop.html">Shop</a></li>
-                        <li><a href="#">Collection</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Men's</a></li>
-                                <li><a href="#">Women's</a></li>
-                                <li><a href="#">Kid's</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./index.php">Home</a></li>
+                        <li class="active"><a href="./shop.php">Buy</a></li>
+                        <li><a href="./about.php">About Us</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
                             <ul class="dropdown">
-                                <li><a href="./blog-details.html">Blog Details</a></li>
-                                <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                <li><a href="./check-out.html">Checkout</a></li>
-                                <li><a href="./faq.html">Faq</a></li>
-                                <li><a href="./register.html">Register</a></li>
-                                <li><a href="./login.html">Login</a></li>
+                                <li><a href="./about.php">About Us</a></li>
+                                <li><a href="./shopping-cart.php">Shopping Cart</a></li>
+                                <li><a href="./checkout.php">Checkout</a></li>
+                                <li><a href="./register.php">Register</a></li>
+                                <li><a href="./login.php">Login</a></li>
                             </ul>
                         </li>
                     </ul>

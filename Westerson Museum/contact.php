@@ -146,23 +146,19 @@
                         <i class="ti-menu"></i>
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Paintings</a></li>
-                            <li><a href="#">Sculptures</a></li>
-                            <li><a href="#">Ceramics</a></li>
-                            <li><a href="#">Mosaic
-                            </a></li>
+                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
+                        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+                        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+                        <li><a href="shop.php?category=mosaic">Mosaic</a></li>
                         </ul>
                     </div>
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.php">Home</a></li>
+                        <li><a href="./index.php">Home</a></li>
                         <li><a href="./shop.php">Buy</a></li>
-                        <li><a href="#">Sell</a>
-
-                        </li>
                         <li><a href="./about.php">About Us</a></li>
-                        <li><a href="./contact.php">Contact</a></li>
+                        <li class="active"><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
                             <ul class="dropdown">
                                 <li><a href="./about.php">About Us</a></li>

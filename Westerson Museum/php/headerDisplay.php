@@ -11,11 +11,11 @@
                         <div class="ht-left d-md-none d-lg-block col-lg-5">
                             <div class="mail-service">
                                 <i class=" fa fa-envelope"></i>
-                                hello.colorlib@gmail.com
+                                westerson.museum@gmail.com
                             </div>
                             <div class="phone-service">
                                 <i class=" fa fa-phone"></i>
-                                +65 11.188.888
+                                +63 32 146 8888
                             </div>
                         </div>
                         <div class="col-4 col-md-6 col-lg-2"></div>
@@ -47,11 +47,11 @@
         $display.=' <div class="ht-left">
                         <div class="mail-service">
                             <i class=" fa fa-envelope"></i>
-                            hello.colorlib@gmail.com
+                            westerson.museum@gmail.com
                         </div>
                         <div class="phone-service">
                             <i class=" fa fa-phone"></i>
-                            +65 11.188.888
+                            +63 32 146 8888
                         </div>
                     </div>
                     <div class="ht-right">
