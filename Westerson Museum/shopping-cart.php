@@ -268,7 +268,7 @@
                                         ?></span></li>
                                         <li class="cart-total">Total <span><?php
                                             if (isset($total) and $total>0){
-                                                echo "\$", number_format($total+($total*0.05), 2);
+                                                echo "\$", number_format($total+50+($total*0.03), 2);
                                             }
                                             else{
                                                 echo "-";
