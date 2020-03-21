@@ -4,6 +4,7 @@
     include 'php/cart.php';
     include 'php/headerDisplay.php';
     $_SESSION['current-page-url'] = $_SERVER['REQUEST_URI'];
+    include 'php/featured.php';
 ?>
 <html lang="zxx">
 
@@ -145,11 +146,11 @@
                         <i class="ti-menu"></i>
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Paintings</a></li>
-                            <li><a href="#">Sculptures</a></li>
-                            <li><a href="#">Ceramics</a></li>
-                            <li><a href="#">Mosaic
-                            </a></li>
+                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
+        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+        <li><a href="shop.php?category=mosaic">Mosaic
+        </a></li>
                         </ul>
                     </div>
                 </div>
@@ -157,9 +158,9 @@
                     <ul>
                         <li class="active"><a href="./index.php">Home</a></li>
                         <li><a href="./shop.php">Buy</a></li>
-                        <li><a href="#">Sell</a>
+                        <!-- <li><a href="#">Sell</a>
 
-                        </li>
+                        </li> -->
                         <li><a href="./about.php">About Us</a></li>
                         <li><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
@@ -190,7 +191,7 @@
                             <h1 style="font-size: 50px;">Anniversary Sale</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore</p>
-                            <a href="#" class="primary-btn">Shop Now</a>
+                            <a href="shop.php" class="primary-btn">Shop Now</a>
                         </div>
                     </div>
                     <!-- <div class="off-card">
@@ -206,7 +207,7 @@
                             <h1 style="font-size: 60px;">New Arrivals</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore</p>
-                            <a href="#" class="primary-btn">Shop Now</a>
+                            <a href="shop.php?category=paintings" class="primary-btn">Shop Now</a>
                         </div>
                     </div>
                     <!-- <div class="off-card">
@@ -216,15 +217,17 @@
             </div>
         </div>
     </section>
+    <br>
+    <br>
     <!-- Hero Section End -->
 
     <!-- Banner Section Begin -->
-    <div class="banner-section spad">
+    <!-- <div class="banner-section spad">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="img/banner-1.jpg" alt="">
+                        <img src="img/painting.jpg" alt="">
                         <div class="inner-text">
                             <h4>Men’s</h4>
                         </div>
@@ -248,11 +251,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Banner Section End -->
 
     <!-- Women Banner Section Begin -->
-    <section class="women-banner spad">
+    <!-- <section class="women-banner spad">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
@@ -365,16 +368,16 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Women Banner Section End -->
 
     <!-- Deal Of The Week Section Begin-->
-    <section class="deal-of-week set-bg spad" data-setbg="img/time-bg.jpg">
+    <section class="deal-of-week set-bg spad" data-setbg="img/david.jpg">
         <div class="container">
             <div class="col-lg-6 text-center">
                 <div class="section-title">
-                    <h2>Deal Of The Week</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br /> do ipsum dolor sit amet,
+                    <h2 style="color:white">Deal Of The Week</h2>
+                    <p style ="color:#d8d3d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br /> do ipsum dolor sit amet,
                         consectetur adipisicing elit </p>
                     <div class="product-price">
                         $35.00
@@ -399,7 +402,7 @@
                         <p>Secs</p>
                     </div>
                 </div>
-                <a href="#" class="primary-btn">Shop Now</a>
+                <a href="shop.php" class="primary-btn">Shop Now</a>
             </div>
         </div>
     </section>
@@ -410,16 +413,25 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8">
+                
                     <div class="filter-control">
-                        <ul>
+                    <h2 style="color:#a2a2a2"> Featured </h2>
+                        <!-- <ul>
                             <li class="active">Clothings</li>
                             <li>HandBag</li>
                             <li>Shoes</li>
                             <li>Accessories</li>
-                        </ul>
-                    </div>
+                        </ul> -->
+                    </div> 
                     <div class="product-slider owl-carousel">
-                        <div class="product-item">
+                
+                    <?php
+                            if(isset($display1)){
+                                echo $display1;
+                            }
+                        ?>
+                       
+                        <!-- <div class="product-item">
                             <div class="pi-pic">
                                 <img src="img/products/man-1.jpg" alt="">
                                 <div class="sale">Sale</div>
@@ -508,13 +520,13 @@
                                     $34.00
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3 offset-lg-1">
-                    <div class="product-large set-bg m-large" data-setbg="img/products/man-large.jpg">
-                        <h2>Men’s</h2>
-                        <a href="#">Discover More</a>
+                    <div class="product-large set-bg m-large" data-setbg="img/products/sculp.jpg">
+                        <h2>Ancient Sculptures</h2>
+                        <a href="shop.php?category=sculptures">Discover More</a>
                     </div>
                 </div>
             </div>
@@ -523,7 +535,7 @@
     <!-- Man Banner Section End -->
 
     <!-- Instagram Section Begin -->
-    <div class="instagram-photo">
+    <!-- <div class="instagram-photo">
         <div class="insta-item set-bg" data-setbg="img/insta-1.jpg">
             <div class="inside-text">
                 <i class="ti-instagram"></i>
@@ -560,7 +572,7 @@
                 <h5><a href="#">colorlib_Collection</a></h5>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Instagram Section End -->
 
     <!-- Latest Blog Section Begin -->
@@ -569,27 +581,27 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>From The Blog</h2>
+                        <h2>About Us</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-latest-blog">
-                        <img src="img/latest-1.jpg" alt="">
+                        <img src="img/products/jeweler.jpg" alt="">
                         <div class="latest-text">
                             <div class="tag-list">
                                 <div class="tag-item">
                                     <i class="fa fa-calendar-o"></i>
                                     May 4,2019
                                 </div>
-                                <div class="tag-item">
+                                <!-- <div class="tag-item">
                                     <i class="fa fa-comment-o"></i>
                                     5
-                                </div>
+                                </div> -->
                             </div>
-                            <a href="#">
-                                <h4>The Best Street Style From London Fashion Week</h4>
+                            <a href="about.php#mission">
+                                <h4>Our Mission</h4>
                             </a>
                             <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
                         </div>
@@ -597,20 +609,20 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-latest-blog">
-                        <img src="img/latest-2.jpg" alt="">
+                        <img src="img/products/artist.jpg" alt="">
                         <div class="latest-text">
                             <div class="tag-list">
                                 <div class="tag-item">
                                     <i class="fa fa-calendar-o"></i>
                                     May 4,2019
                                 </div>
-                                <div class="tag-item">
+                                <!-- <div class="tag-item">
                                     <i class="fa fa-comment-o"></i>
                                     5
-                                </div>
+                                </div> -->
                             </div>
-                            <a href="#">
-                                <h4>Vogue's Ultimate Guide To Autumn/Winter 2019 Shoes</h4>
+                            <a href="about.php#vision">
+                                <h4>Our Vision</h4>
                             </a>
                             <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
                         </div>
@@ -618,20 +630,20 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-latest-blog">
-                        <img src="img/latest-3.jpg" alt="">
+                        <img src="img/products/curator.jpg" alt="">
                         <div class="latest-text">
                             <div class="tag-list">
                                 <div class="tag-item">
                                     <i class="fa fa-calendar-o"></i>
                                     May 4,2019
                                 </div>
-                                <div class="tag-item">
+                                <!-- <div class="tag-item">
                                     <i class="fa fa-comment-o"></i>
                                     5
-                                </div>
+                                </div> -->
                             </div>
-                            <a href="#">
-                                <h4>How To Brighten Your Wardrobe With A Dash Of Lime</h4>
+                            <a href="about.php#service">
+                                <h4>Our Service</h4>
                             </a>
                             <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
                         </div>
