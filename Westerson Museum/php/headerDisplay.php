@@ -33,8 +33,7 @@
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">My Profile</a>
-                                <a class="dropdown-item" href="shopping-cart.php">Your Cart</a>
+                                <a class="dropdown-item" href="shopping-cart.php">My Cart</a>
                                 <div class="dropdown-divider"></div>
                                 <form method = "POST">
                                 <button type="submit" class="dropdown-item" href="index.php" name="btnLogout">Log Out</button>

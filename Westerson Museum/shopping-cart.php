@@ -251,7 +251,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="cart-buttons">
-                                    <button class="primary-btn continue-shop" name="cartContBtn">Continue shopping</button>
+                                    <a class="primary-btn continue-shop" href="shop.php">Continue shopping</a>
                                     <button type="submit" class="primary-btn up-cart" name="cartUpdateBtn">Update cart</button>
                                 </div>
                             </div>
