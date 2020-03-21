@@ -32,10 +32,10 @@
         $pdf->Cell(115	,5,'Cebu, Philippines, 6000',0,0);
         $pdf->Cell(30	,5,'Date',0,0);
         $pdf->Cell(44	,5,$row['DatePurchased'],0,1);//end of line
-        $pdf->Cell(115	,5,'Phone [+12345678]',0,0);
+        $pdf->Cell(115	,5,'Phone +63 32 146 8888',0,0);
         $pdf->Cell(30	,5,'Invoice #',0,0);
         $pdf->Cell(44	,5,$row['OrderID'],0,1);//end of line
-        $pdf->Cell(115	,5,'Fax [+12345678]',0,0);
+        $pdf->Cell(115	,5,'Fax +63 32 272 1888',0,0);
         $pdf->Cell(30	,5,'Customer ID',0,0);
         $pdf->Cell(44	,5,$row['BuyerID'],0,1);//end of line
         //spacing
