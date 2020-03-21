@@ -176,7 +176,7 @@
     
        
         while($row = mysqli_fetch_array($result)){
-                $display.='                         <div class="col-lg-4 col-sm-6">
+                $displayArt.='                         <div class="col-lg-4 col-sm-6">
                 <div class="product-item">
                     <div class="pi-pic">
                         <img src="data:image/jpeg;base64,'.base64_encode( $row['6'] ).'" alt="">
