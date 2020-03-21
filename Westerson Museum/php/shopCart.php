@@ -22,7 +22,30 @@
                                             </div>
                                         </td>
                                         <td class="total-price first-row">'.'$'.number_format($cart->price*$cart->qty, 2).'</td>
-                                        <td class="close-td first-row"><i class="ti-close"></i></td>
+                                        <td class="close-td first-row">
+                                            <button type="button" class="btn bg-transparent" data-toggle="modal" data-target="#modal'.$cart->cartID.'"><i class="ti-close"></i></button>
+                                            <div class="modal fade" id="modal'.$cart->cartID.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content" style="text-transform:none">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title font" id="exampleModalLabel">Are you sure?</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure you want to remove '.$cart->name.' from the cart?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <form method="GET">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-danger" name="removeItem" value='.$cart->cartID.'>Remove</button>
+                                                        </form>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     ';
             else
@@ -41,7 +64,30 @@
                                             </div>
                                         </td>
                                         <td class="total-price">'.'$'.number_format($cart->price*$cart->qty, 2).'</td>
-                                        <td class="close-td"><i class="ti-close"></i></td>
+                                        <td class="close-td">
+                                            <button type="button" class="btn bg-transparent" data-toggle="modal" data-target="#modal'.$cart->cartID.'"><i class="ti-close"></i></button>
+                                            <div class="modal fade" id="modal'.$cart->cartID.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content" style="text-transform:none">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title font" id="exampleModalLabel">Are you sure?</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure you want to remove '.$cart->name.' from the cart?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <form method="GET">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-danger" name="removeItem" value='.$cart->cartID.'>Remove</button>
+                                                        </form>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     ';
             $rowCount++;

@@ -119,4 +119,10 @@
             exit();
         }
     }
+
+    if (isset($_POST['removeAll'])){
+        if (!empty($_SESSION['cart'])){
+            unset($_SESSION['cart']);
+        }
+    }
 ?>

@@ -215,7 +215,30 @@
                                         <th>Price</th>
                                         <th>Quantity</th>
                                         <th>Total</th>
-                                        <th><i class="ti-close"></i></th>
+                                        <th><button type="button" class="btn bg-transparent" data-toggle="modal" data-target="#exampleModal"><i class="ti-close"></i></button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content" style="text-transform:none">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title font" id="exampleModalLabel">Are you sure?</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure you want to remove all items in the cart?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <form method="POST">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-danger" name="removeAll">Remove All</button>
+                                                        </form>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
