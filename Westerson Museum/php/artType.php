@@ -173,7 +173,7 @@
     else{
         if(isset($_GET['category'])){
             $category= $_GET['category']; 
-            $sql = "SELECT * FROM artpiece WHERE TypeofArt = '$category' AND SellerID != '$userid' ";
+            $sql = "SELECT * FROM artpiece WHERE TypeofArt = '$category'";
             $result = mysqli_query($con,$sql);
     
             while($row = mysqli_fetch_array($result)){
