@@ -178,29 +178,21 @@
             </div>
         </div>
     </header>
-    <!-- Header End -->
 
-    <!-- Blog Details Section Begin -->
     <section class="blog-details spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="blog-details-inner">
                         <div class="blog-detail-title" id= "mission">
-                            <h2>The Personality Trait That Makes People Happier</h2>
-                            <p>travel <span>- May 19, 2019</span></p>
+                            <h2>Our Mission</h2>
+                            <p>Established <span>- May 19, 1909</span></p>
                         </div>
                         <div class="blog-large-pic">
-                            <img src="img/blog/blog-detail.jpg" alt="">
+                            <img src="img/blog/museum.jpg" alt="">
                         </div>
                         <div class="blog-detail-desc">
-                            <p>psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit
-                                amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
-                            </p>
+                            <p>The Westerson Museum is an umbrella government organization that oversees a number of national museums in the Philippines including ethnographic, anthropological, archaeological and visual arts collections.</p>
                         </div>
                         <div class="blog-quote">
                             <p>“ Technology is nothing. What's important is that you have a faith in people, that
@@ -210,350 +202,79 @@
                         <div class="blog-more">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-1.jpg" alt="">
+                                    <img src="img/blog/interior.jpg" alt="">
                                 </div>
                                 <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-2.jpg" alt="">
+                                    <img src="img/blog/cer.jpg" alt="">
                                 </div>
                                 <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-3.jpg" alt="">
+                                    <img src="img/blog/stats.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <p>Sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-                        <div class="tag-share">
-                            <div class="details-tag">
-                                <ul>
-                                    <li><i class="fa fa-tags"></i></li>
-                                    <li>Travel</li>
-                                    <li>Beauty</li>
-                                    <li>Fashion</li>
-                                </ul>
-                            </div>
-                            <div class="blog-share">
-                                <span>Share:</span>
-                                <div class="social-links">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-post">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-6">
-                                    <a href="#" class="prev-blog">
-                                        <div class="pb-pic">
-                                            <i class="ti-arrow-left"></i>
-                                            <img src="img/blog/prev-blog.png" alt="">
-                                        </div>
-                                        <div class="pb-text">
-                                            <span>Previous Post:</span>
-                                            <h5>The Personality Trait That Makes People Happier</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-5 offset-lg-2 col-md-6">
-                                    <a href="#" class="next-blog">
-                                        <div class="nb-pic">
-                                            <img src="img/blog/next-blog.png" alt="">
-                                            <i class="ti-arrow-right"></i>
-                                        </div>
-                                        <div class="nb-text">
-                                            <span>Next Post:</span>
-                                            <h5>The Personality Trait That Makes People Happier</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="posted-by">
-                            <div class="pb-pic">
-                                <img src="img/blog/post-by.png" alt="">
-                            </div>
-                            <div class="pb-text">
-                                <a href="#">
-                                    <h5>Shane Lynch</h5>
-                                </a>
-                                <p>Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    amodo</p>
-                            </div>
-                        </div>
-                        <div class="leave-comment">
-                            <h4>Leave A Comment</h4>
-                            <form action="#" class="comment-form">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="Name">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="Email">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <textarea placeholder="Messages"></textarea>
-                                        <button type="submit" class="site-btn">Send message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                        <p>The Westerson Museum is one of the major museums in the city located within the Bangko Sentral ng Pilipinas Complex along Roxas Boulevard in the Malate district of Manila, the Philippines.  
 
+<br>
+<br>
                     <div class="blog-details-inner">
                         <div class="blog-detail-title" id= "vision">
-                            <h2>The Personality Trait That Makes People Happier</h2>
-                            <p>travel <span>- May 19, 2019</span></p>
+                            <h2>Our Vision</h2>
+                          
                         </div>
                         <div class="blog-large-pic">
-                            <img src="img/blog/blog-detail.jpg" alt="">
+                            <img src="img/blog/pic.jpg" alt="">
                         </div>
                         <div class="blog-detail-desc">
-                            <p>psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit
-                                amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+                            <p>Realizing the full potential of the arts and the internet -- universal access to research and education, full participation in culture -- to drive a new era of development, growth, and productivity.
                             </p>
                         </div>
-                        <div class="blog-quote">
-                            <p>“ Technology is nothing. What's important is that you have a faith in people, that
-                                they're basically good and smart, and if you give them tools, they'll do wonderful
-                                things with them.” <span>- Steven Jobs</span></p>
-                        </div>
-                        <div class="blog-more">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-1.jpg" alt="">
-                                </div>
-                                <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-2.jpg" alt="">
-                                </div>
-                                <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-3.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <p>Sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-                        <div class="tag-share">
-                            <div class="details-tag">
-                                <ul>
-                                    <li><i class="fa fa-tags"></i></li>
-                                    <li>Travel</li>
-                                    <li>Beauty</li>
-                                    <li>Fashion</li>
-                                </ul>
-                            </div>
-                            <div class="blog-share">
-                                <span>Share:</span>
-                                <div class="social-links">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-post">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-6">
-                                    <a href="#" class="prev-blog">
-                                        <div class="pb-pic">
-                                            <i class="ti-arrow-left"></i>
-                                            <img src="img/blog/prev-blog.png" alt="">
-                                        </div>
-                                        <div class="pb-text">
-                                            <span>Previous Post:</span>
-                                            <h5>The Personality Trait That Makes People Happier</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-5 offset-lg-2 col-md-6">
-                                    <a href="#" class="next-blog">
-                                        <div class="nb-pic">
-                                            <img src="img/blog/next-blog.png" alt="">
-                                            <i class="ti-arrow-right"></i>
-                                        </div>
-                                        <div class="nb-text">
-                                            <span>Next Post:</span>
-                                            <h5>The Personality Trait That Makes People Happier</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="posted-by">
-                            <div class="pb-pic">
-                                <img src="img/blog/post-by.png" alt="">
-                            </div>
-                            <div class="pb-text">
-                                <a href="#">
-                                    <h5>Shane Lynch</h5>
-                                </a>
-                                <p>Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    amodo</p>
-                            </div>
-                        </div>
-                        <div class="leave-comment">
-                            <h4>Leave A Comment</h4>
-                            <form action="#" class="comment-form">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="Name">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="Email">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <textarea placeholder="Messages"></textarea>
-                                        <button type="submit" class="site-btn">Send message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
 
+                        <p>A vision statement describes where the company aspires to be upon achieving its mission. This statement reveals the "where" of a business. Below are some vision statements from well-known companies to give you a sense of how a vision represents a brand.</p>
+       
+                    </div>
+<br>
+<br>
                     <div class="blog-details-inner">
                         <div class="blog-detail-title" id= "service">
-                            <h2>The Personality Trait That Makes People Happier</h2>
-                            <p>travel <span>- May 19, 2019</span></p>
+                            <h2>Our Service</h2>
+                  
                         </div>
                         <div class="blog-large-pic">
-                            <img src="img/blog/blog-detail.jpg" alt="">
+                            <img src="img/blog/service.jpg" alt="">
                         </div>
                         <div class="blog-detail-desc">
-                            <p>psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit
-                                amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
-                            </p>
+                            <p>The service encounter is defined as all activities involved in the service delivery process. Some service managers use the term "moment of truth" to indicate that point in a service encounter where interactions are most intense.
+<br><br>
+Many business theorists view service provision as a performance or act (sometimes humorously referred to as dramalurgy, perhaps in reference to dramaturgy). The location of the service delivery is referred to as the stage and the objects that facilitate the service process are called props. A script is a sequence of behaviors followed by those involved, including the client(s). Some service dramas are tightly scripted, others are more ad lib. Role congruence occurs when each actor follows a script that harmonizes with the roles played by the other actors.
+<br><br>
+In some service industries, especially health care, dispute resolution and social services, a popular concept is the idea of the caseload, which refers to the total number of patients, clients, litigants, or claimants for which a given employee is responsible. Employees must balance the needs of each individual case against the needs of all other current cases as well as their own needs.
+   </p>
                         </div>
                         <div class="blog-quote">
-                            <p>“ Technology is nothing. What's important is that you have a faith in people, that
-                                they're basically good and smart, and if you give them tools, they'll do wonderful
-                                things with them.” <span>- Steven Jobs</span></p>
+                            <p>“No great artist ever sees things as they really are. The essence of all beautiful art, all great art, is gratitude. If you hear a voice within you say 'you cannot paint,' then by all means paint, and that voice will be silenced.” <span>- Thomas Merton</span></p>
                         </div>
-                        <div class="blog-more">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-1.jpg" alt="">
-                                </div>
-                                <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-2.jpg" alt="">
-                                </div>
-                                <div class="col-sm-4">
-                                    <img src="img/blog/blog-detail-3.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <p>Sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+
                         <div class="tag-share">
                             <div class="details-tag">
                                 <ul>
                                     <li><i class="fa fa-tags"></i></li>
-                                    <li>Travel</li>
-                                    <li>Beauty</li>
-                                    <li>Fashion</li>
+                                    <li>Art</li>
+                                    <li>Store</li>
+                                    <li>Mission</li>
                                 </ul>
                             </div>
                             <div class="blog-share">
-                                <span>Share:</span>
-                                <div class="social-links">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
+                 
                             </div>
                         </div>
-                        <div class="blog-post">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-6">
-                                    <a href="#" class="prev-blog">
-                                        <div class="pb-pic">
-                                            <i class="ti-arrow-left"></i>
-                                            <img src="img/blog/prev-blog.png" alt="">
-                                        </div>
-                                        <div class="pb-text">
-                                            <span>Previous Post:</span>
-                                            <h5>The Personality Trait That Makes People Happier</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-5 offset-lg-2 col-md-6">
-                                    <a href="#" class="next-blog">
-                                        <div class="nb-pic">
-                                            <img src="img/blog/next-blog.png" alt="">
-                                            <i class="ti-arrow-right"></i>
-                                        </div>
-                                        <div class="nb-text">
-                                            <span>Next Post:</span>
-                                            <h5>The Personality Trait That Makes People Happier</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="posted-by">
-                            <div class="pb-pic">
-                                <img src="img/blog/post-by.png" alt="">
-                            </div>
-                            <div class="pb-text">
-                                <a href="#">
-                                    <h5>Shane Lynch</h5>
-                                </a>
-                                <p>Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    amodo</p>
-                            </div>
-                        </div>
-                        <div class="leave-comment">
-                            <h4>Leave A Comment</h4>
-                            <form action="#" class="comment-form">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="Name">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="Email">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <textarea placeholder="Messages"></textarea>
-                                        <button type="submit" class="site-btn">Send message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Blog Details Section End -->
 
-    <!-- Partner Logo Section Begin -->
+
     <div class="partner-logo">
         <div class="container">
             <div class="logo-carousel owl-carousel">
