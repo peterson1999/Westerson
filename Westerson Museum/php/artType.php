@@ -1,8 +1,8 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "westerson_museum") or die(mysqli_connect_error());
     $displayArt = "";
-    $user=$_SESSION['user'];
     if (isset($_SESSION['user'])){
+        $user=$_SESSION['user'];
         $sql = "SELECT UserID FROM user WHERE Username = '$user'";
         $result =  mysqli_query($con, $sql);
         if (!$result){
@@ -176,7 +176,7 @@
     
        
         while($row = mysqli_fetch_array($result)){
-                $display.='                         <div class="col-lg-4 col-sm-6">
+                $displayArt.='                         <div class="col-lg-4 col-sm-6">
                 <div class="product-item">
                     <div class="pi-pic">
                         <img src="data:image/jpeg;base64,'.base64_encode( $row['6'] ).'" alt="">
