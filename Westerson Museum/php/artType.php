@@ -35,7 +35,7 @@
                         </div>
                         <div class="pi-text">
                             <div class="catagory-name">'.$row[2].'</div>
-                            <a href="#">
+                            <a href="product.php?piece_number='.$row[0].'">
                                 <h5>'.$row[1].'</h5>
                             </a>
                             <div class="product-price">
@@ -102,7 +102,7 @@
                         </div>
                         <div class="pi-text">
                             <div class="catagory-name">'.$row[2].'</div>
-                            <a href="#">
+                            <a href="product.php?piece_number='.$row[0].'">
                                 <h5>'.$row[1].'</h5>
                             </a>
                             <div class="product-price">
@@ -148,7 +148,7 @@
                         </div>
                         <div class="pi-text">
                             <div class="catagory-name">'.$row[2].'</div>
-                            <a href="#">
+                            <a href="product.php?piece_number='.$row[0].'">
                                 <h5>'.$row[1].'</h5>
                             </a>
                             <div class="product-price">
@@ -192,7 +192,7 @@
                     </div>
                     <div class="pi-text">
                         <div class="catagory-name">'.$row[2].'</div>
-                        <a href="#">
+                        <a href="product.php?piece_number='.$row[0].'">
                             <h5>'.$row[1].'</h5>
                         </a>
                         <div class="product-price">
