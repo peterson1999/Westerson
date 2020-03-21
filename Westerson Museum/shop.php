@@ -210,12 +210,14 @@
                     <div class="filter-widget">
                         <h4 class="fw-title">Categories</h4>
                         <ul class="filter-catagories">
-                            <li><a href="#">Men</a></li>
-                            <li><a href="#">Women</a></li>
-                            <li><a href="#">Kids</a></li>
+                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
+        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+        <li><a href="shop.php?category=mosaic">Mosaic
+        </a></li>
                         </ul>
                     </div>
-                    <div class="filter-widget">
+                    <!-- <div class="filter-widget">
                         <h4 class="fw-title">Brand</h4>
                         <div class="fw-brand-check">
                             <div class="bc-item">
@@ -247,8 +249,8 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="filter-widget">
+                    </div> -->
+                    <!-- <div class="filter-widget">
                         <h4 class="fw-title">Price</h4>
                         <div class="filter-range-wrap">
                             <div class="range-slider">
@@ -265,8 +267,8 @@
                             </div>
                         </div>
                         <a href="#" class="filter-btn">Filter</a>
-                    </div>
-                    <div class="filter-widget">
+                    </div> -->
+                    <!-- <div class="filter-widget">
                         <h4 class="fw-title">Color</h4>
                         <div class="fw-color-choose">
                             <div class="cs-item">
@@ -294,8 +296,8 @@
                                 <label class="cs-green" for="cs-green">Green</label>
                             </div>
                         </div>
-                    </div>
-                    <div class="filter-widget">
+                    </div> -->
+                    <!-- <div class="filter-widget">
                         <h4 class="fw-title">Size</h4>
                         <div class="fw-size-choose">
                             <div class="sc-item">
@@ -327,7 +329,7 @@
                             <a href="#">Men's hats</a>
                             <a href="#">Backpack</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-9 order-1 order-lg-2">
                     <div class="product-show-option">
