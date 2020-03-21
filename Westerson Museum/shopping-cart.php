@@ -16,8 +16,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Fashi Template">
-    <meta name="keywords" content="Fashi, unica, creative, html">
+    <meta name="description" content="Westerson Museum">
+    <meta name="keywords" content="Westerson, museum, creative, art">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Your Cart | Westerson Museum</title>
@@ -152,25 +152,23 @@
                         <i class="ti-menu"></i>
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Paintings</a></li>
-                            <li><a href="#">Sculptures</a></li>
-                            <li><a href="#">Ceramics</a></li>
-                            <li><a href="#">Mosaic
-                            </a></li>
+                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
+                        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+                        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+                        <li><a href="shop.php?category=mosaic">Mosaic</a></li>
                         </ul>
                     </div>
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.php">Home</a></li>
+                        <li><a href="./index.php">Home</a></li>
                         <li><a href="./shop.php">Buy</a></li>
-                        <li><a href="#">Sell</a></li>
                         <li><a href="./about.php">About Us</a></li>
                         <li><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
                             <ul class="dropdown">
                                 <li><a href="./about.php">About Us</a></li>
-                                <li><a href="./shopping-cart.php">Shopping Cart</a></li>
+                                <li class="active"><a href="./shopping-cart.php">Shopping Cart</a></li>
                                 <li><a href="./checkout.php">Checkout</a></li>
                                 <li><a href="./register.php">Register</a></li>
                                 <li><a href="./login.php">Login</a></li>
@@ -256,13 +254,6 @@
                                     <button class="primary-btn continue-shop" name="cartContBtn">Continue shopping</button>
                                     <button type="submit" class="primary-btn up-cart" name="cartUpdateBtn">Update cart</button>
                                 </div>
-                                <div class="discount-coupon">
-                                    <h6>Discount Codes</h6>
-                                    <form action="#" class="coupon-form">
-                                        <input type="text" placeholder="Enter your codes">
-                                        <button type="submit" class="site-btn coupon-btn">Apply</button>
-                                    </form>
-                                </div>
                             </div>
                             <div class="col-lg-4 offset-lg-4">
                                 <div class="proceed-checkout">
@@ -284,7 +275,14 @@
                                             }
                                         ?></span></li>
                                     </ul>
-                                    <button type="submit" class="proceed-btn" style="width:100%" name="toCheckoutBtn">PROCEED TO CHECK OUT</button>
+                                    <?php
+                                        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+                                            echo '<button type="submit" class="proceed-btn" style="width:100%" name="toCheckoutBtn">PROCEED TO CHECK OUT</button>';
+                                        }
+                                        else{
+                                            echo '<button type="submit" class="proceed-btn" style="width:100%" name="toCheckoutBtn" disabled>NOTHING TO CHECK OUT</button>';
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>

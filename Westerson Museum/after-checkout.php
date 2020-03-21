@@ -14,11 +14,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Fashi Template">
-    <meta name="keywords" content="Fashi, unica, creative, html">
+    <meta name="description" content="Westerson Museum">
+    <meta name="keywords" content="Westerson, museum, creative, art">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Check Out | Westerson Museum</title>
+    <title>Thank you for your purchase! | Westerson Museum</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -150,21 +150,17 @@
                         <i class="ti-menu"></i>
                         <span>All Artpieces</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Paintings</a></li>
-                            <li><a href="#">Sculptures</a></li>
-                            <li><a href="#">Ceramics</a></li>
-                            <li><a href="#">Mosaic
-                            </a></li>
+                        <li><a href = "shop.php?category=paintings">Paintings</a></li>
+                        <li><a href="shop.php?category=sculptures">Sculptures</a></li>
+                        <li><a href="shop.php?category=ceramics">Ceramics</a></li>
+                        <li><a href="shop.php?category=mosaic">Mosaic</a></li>
                         </ul>
                     </div>
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.php">Home</a></li>
+                        <li><a href="./index.php">Home</a></li>
                         <li><a href="./shop.php">Buy</a></li>
-                        <li><a href="#">Sell</a>
-
-                        </li>
                         <li><a href="./about.php">About Us</a></li>
                         <li><a href="./contact.php">Contact</a></li>
                         <li><a href="#">Pages</a>
@@ -211,12 +207,7 @@
                         <h4 class="text-center mb-1">Your artwork is on its way!</h4>
                         <h5 class="text-center text-muted mb-4">Thank you for supporting Westerson Museum!
                             <br>Our goal is to be able to create a community that can help revitalize the world's love for art.<br>
-                            <br>An email confirming your order has been sent to 
-                            <?php
-                                if (isset($displayEmail)){
-                                    echo $displayEmail;
-                                }
-                            ?>.</h5>
+                            <br>There are still so many artworks that need your attention. Maybe there are still more that you would like.</h5>
                         <div class="row">
                         <div class="col-lg-2 mb-2"></div>
                             <div class="col-lg-8 text-center mb-2">

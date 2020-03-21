@@ -18,7 +18,6 @@
         
         //necessary variables for later
         $user = $_SESSION['user'];
-        $code = $_POST['coupon-code'];
         $totalPrice = $_SESSION['total-price'];
         $transactType = $_POST['transact-type'];
         
@@ -33,8 +32,8 @@
         $_SESSION['orderID'] = $id;
         
         //add order to orderdetails, this one first since orderID is foreign key in transaction
-        $sql = "INSERT INTO orderdetails (OrderID, DatePurchased, VoucherCode, TotalPrice) 
-                VALUES ('$id', '$date', '$code', $totalPrice)";
+        $sql = "INSERT INTO orderdetails (OrderID, DatePurchased, TotalPrice) 
+                VALUES ('$id', '$date', $totalPrice)";
         mysqli_query($con, $sql);
         
         //add each item in cart to transaction
