@@ -85,7 +85,7 @@
             $_SESSION['current-page-url'] = $curPageUrl;
         }
     }
-    if (isset($_POST['btnSearch']) && !empty($_POST['btnSearch'])){
+    if (isset($_POST['btnSearch'])){
         $search = $_POST['searchBar'];
         $search = strtolower($search);
         $search = '%'.$search.'%';
